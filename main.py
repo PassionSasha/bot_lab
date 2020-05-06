@@ -9,6 +9,6 @@ def get_text_messages(message):
     elif message.text == "А зараз?":
         bot.send_message(message.from_user.id, "нет")
     else:
-        bot.send_message(message.from_user.id, "та перезапусти")
+        bot.send_message(message.from_user.id, "та перезапусти, та не вийде")
 
-bot.polling(none_stop=True, interval=2)
+bot.polling(none_stop=True, interval=2) 
