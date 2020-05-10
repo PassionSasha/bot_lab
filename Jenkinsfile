@@ -8,7 +8,7 @@ pipeline{
                      dir('docker') {
                      sh 'docker build . '
                      sh 'docker run . '
-                 }
+                        }
                  }
              }
         }
