@@ -1,7 +1,6 @@
 pipeline{
     agent {
-        label 'master
-        '
+        label 'master'
         }
         stages {
             stage("robotay"){
