@@ -6,7 +6,7 @@ pipeline{
         stage('Initialize'){
         def dockerHome = tool 'myDocker'
         env.PATH = "/var/lib/docker"
-    }
+                }
             stage("robotay"){
                 steps{
                      dir('docker') {
