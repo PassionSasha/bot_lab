@@ -1,10 +1,16 @@
 FROM python:buster
+FROM jenkins
+
+USER root
 RUN apt-get update && apt-get install bash
 RUN pip3 install pytelegrambotapi
-RUN curl -fsSLO https://get.docker/builds/Linux/x86_64/docker-17.04.0-ce.tgz \
-  && tar xzvf docker-17.04.0-ce.tgz \
-  && mv docker/docker /usr/local/bin \
-  && rm -r docker docker-17.04.0-ce.tgz
+RUN cd /usr/local/bin && \
+curl https://master.dockerproject.org/linux/amd64/docker > docker  && \
+chmod +x docker  && \
+groupadd -g 999 docker && \
+usermod -a -G docker jenkins
+
+USER Jenkins
 WORKDIR /usr/local/bin
 COPY bot1.sh ./
 RUN chmod +x+r+w ./bot1.sh
