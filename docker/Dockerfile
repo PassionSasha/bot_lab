@@ -2,17 +2,14 @@ FROM python:buster
 FROM jenkins
 
 USER root
-RUN apt-get update && apt-get install bash
+RUN apt-get update && apt-get install bash && apt-get install -y locales && locale-gen en_US.UTF-8
 
 RUN cd /usr/local/bin && \
 curl https://master.dockerproject.org/linux/amd64/docker > docker  && \
 chmod +x docker  && \
 groupadd -g 999 docker && \
 usermod -a -G docker jenkins
-RUN locale-gen en_US.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
+
 
 WORKDIR /usr/local/bin
 COPY bot1.sh ./
