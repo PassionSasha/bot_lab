@@ -13,7 +13,7 @@ usermod -a -G docker jenkins
 WORKDIR /usr/local/bin
 COPY bot1.sh ./
 COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+
 RUN chmod +x+r+w ./bot1.sh
 RUN ./bot1.sh
 
