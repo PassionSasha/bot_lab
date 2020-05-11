@@ -10,7 +10,7 @@ pipeline{
 
                         }
                      dir('docker') {
-                     sh 'docker run -it -p 80:81 lab6' }
+                     sh 'docker run -p 80:81 lab6' }
                  }
              }
         }
