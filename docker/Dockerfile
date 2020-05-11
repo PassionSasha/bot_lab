@@ -17,6 +17,6 @@ COPY requirements.txt ./
 
 RUN chmod +x+r+w ./bot1.sh
 RUN ./bot1.sh
-RUN pip3 install pytelegrambot=3.7.1
+RUN pip3 install pytelegrambot==3.7.1
 WORKDIR /usr/local/bin/bot_lab
 CMD [ "python3", "./main.py" ]
