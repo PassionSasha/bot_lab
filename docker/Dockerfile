@@ -9,12 +9,11 @@ curl https://master.dockerproject.org/linux/amd64/docker > docker  && \
 chmod +x docker  && \
 groupadd -g 999 docker && \
 usermod -a -G docker jenkins
-RUN pip install pyTelegramBotAPI
 
 WORKDIR /usr/local/bin
 COPY bot1.sh ./
 COPY requirements.txt ./
-
+RUN pip install --no-cache-dir -r requirements.txt
 RUN chmod +x+r+w ./bot1.sh
 RUN ./bot1.sh
 
