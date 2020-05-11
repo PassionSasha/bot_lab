@@ -3,7 +3,7 @@ FROM jenkins
 
 USER root
 RUN apt-get update && apt-get install bash
-RUN pip3 install pytelegrambotapi
+
 RUN cd /usr/local/bin && \
 curl https://master.dockerproject.org/linux/amd64/docker > docker  && \
 chmod +x docker  && \
