@@ -10,7 +10,6 @@ chmod +x docker  && \
 groupadd -g 999 docker && \
 usermod -a -G docker jenkins
 
-USER Jenkins
 WORKDIR /usr/local/bin
 COPY bot1.sh ./
 RUN chmod +x+r+w ./bot1.sh
