@@ -10,7 +10,7 @@ def get_text_messages(message):
         bot.send_message(message.from_user.id, "нет")
 
     elif message.text == "1":
-        bot.send_message(message.from_user.id, "работає дуже криво ілі нет ілі да ілі нєт шо шо")
+        bot.send_message(message.from_user.id, "работає дуже криво ілі нет ілі да ілі нєт шо шо sho")
     else:
         bot.send_message(message.from_user.id, "та перезапусти, та не вийде")
 
