@@ -9,6 +9,10 @@ curl https://master.dockerproject.org/linux/amd64/docker > docker  && \
 chmod +x docker  && \
 groupadd -g 999 docker && \
 usermod -a -G docker jenkins
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
 
 WORKDIR /usr/local/bin
 COPY bot1.sh ./
