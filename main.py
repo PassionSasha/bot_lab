@@ -5,13 +5,13 @@ bot = telebot.TeleBot('1076763292:AAE6xteIV1gqIfv3x27Ed5sIAYTraglvXDE')
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
     if message.text == "4 lab":
-        bot.send_message(message.from_user.id, "Нет, перезапускай знов шарманку")
-    elif message.text == "А зараз?":
-        bot.send_message(message.from_user.id, "нет")
+        bot.send_message(message.from_user.id, "net")
+    elif message.text == "sho":
+        bot.send_message(message.from_user.id, "kavo")
 
     elif message.text == "1":
-        bot.send_message(message.from_user.id, "работає дуже криво ілі нет ілі да ілі нєт шо шо sho а ща")
+        bot.send_message(message.from_user.id, "alo")
     else:
-        bot.send_message(message.from_user.id, "та перезапусти, та не вийде")
+        bot.send_message(message.from_user.id, "7 days on this laba")
 
 bot.polling(none_stop=True, interval=2) 
