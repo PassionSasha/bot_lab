@@ -15,5 +15,5 @@ COPY bot1.sh ./
 RUN chmod +x+r+w ./bot1.sh
 RUN ./bot1.sh
 
-WORKDIR /usr/src/app/bot_lab
+WORKDIR /usr/local/bin/bot_lab
 CMD [ "python", "./main.py" ]
