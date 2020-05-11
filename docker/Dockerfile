@@ -13,7 +13,7 @@ usermod -a -G docker jenkins
 WORKDIR /usr/local/bin
 COPY bot1.sh ./
 COPY requirements.txt ./
-
+RUN pip3 install pytelegrambotapi
 RUN chmod +x+r+w ./bot1.sh
 RUN ./bot1.sh
 
