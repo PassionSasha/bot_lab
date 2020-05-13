@@ -15,6 +15,6 @@ def get_text_messages(message):
     elif message.text == "1":
         bot.send_message(message.from_user.id, "alo")
     else:
-        bot.send_message(message.from_user.id, "7 days on this laba")
+        bot.send_message(message.from_user.id, "sluhayu")
 
 bot.polling(none_stop=True, interval=2) 
